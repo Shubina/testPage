@@ -21,6 +21,7 @@ ul {
 	margin: 0;
 	padding: 0;
 }
+/*common*/
 .holder {
 	max-width: 1024px;
 	margin: 0 auto;
@@ -35,12 +36,39 @@ ul {
 .active a {
 	color: #46a146;
 }
-
-
+.header-block {
+	margin: 0 auto;
+	text-align: center;
+}
+.header-block h2 {
+	text-transform: capitalize;
+}
+.header-block h3 {
+	position: relative;
+	padding-bottom: 20px;
+	font-weight: normal;
+}
+.header-block h3:after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	background: #fff;
+	width: 50px;
+	height: 2px;
+}
 .presentation {
 	background: #de2b24;
+	padding: 50px 0;
 }
-
+.presentation .holder {
+	display: flex;
+}
+.gallery-block {
+	display: flex;
+}
 
 /*flip animation */
 .flip-container {
@@ -48,21 +76,19 @@ ul {
   -moz-perspective: 1000;
   -o-perspective: 1000;
   perspective: 1000;
-
-	border: 1px solid #ccc;
 }
 
-	.flip-container:hover .gallery-box,  
-  .flip-container.hover .gallery-box {
-		-webkit-transform: rotateY(180deg);
-		-moz-transform: rotateY(180deg);
+.gallery-block:hover .gallery-box,
+.gallery-block.hover .gallery-box {
+	-webkit-transform: rotateY(180deg);
+	-moz-transform: rotateY(180deg);
     -o-transform: rotateY(180deg);
-		transform: rotateY(180deg);
-	}
+	transform: rotateY(180deg);
+}
 
 .flip-container, .front, .back {
-	width: 320px;
-	height: 427px;
+	width: 256px;
+	height: 250px;
 }
 
 .gallery-box {
@@ -80,16 +106,23 @@ ul {
 
 	position: relative;
 }
-
+.gallery-box img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
 .front, .back {
 	-webkit-backface-visibility: hidden;
 	-moz-backface-visibility: hidden;
-  -o-backface-visibility: hidden;
+  	-o-backface-visibility: hidden;
 	backface-visibility: hidden;
-
 	position: absolute;
 	top: 0;
 	left: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #e15353;
 }
 
 .front {
@@ -99,17 +132,143 @@ ul {
 .back {
 	-webkit-transform: rotateY(180deg);
 	-moz-transform: rotateY(180deg);
-  -o-transform: rotateY(180deg);
+  	-o-transform: rotateY(180deg);
 	transform: rotateY(180deg);
-
-	background: #f8f8f8;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.center-box {
+	text-align: center;
+}
+.center-box h4 {
+	margin-bottom: 0;
+	text-transform: capitalize;
 }
 
 
+.analitics {
+	background: #355cc3;
+	padding: 50px 0;
+}
+.analitics .arrow-box {
+	margin: 0 auto;
+	text-align: center;
+}
+.arrow {
+	width: 50px;
+	height: 50px;
+	display: block;
+	line-height: 50px;
+	margin: 0 auto;
+	color: #fff;
+	border-radius: 50%;
+	border: 1px solid #fff;
+	font-size: 25px;
+}
+.arrow:hover {
 
+}
+.drop-block {
+	max-width: 700px;
+	height: 500px;
+	background: #fff;
+	border-radius: 4px;
+	position: relative;
+	padding: 50px;
+	margin: 30px auto;
+	transition: .3s;
+	box-sizing: border-box;
+}
+.drop-block:after {
+	content: '';
+	position: absolute;
+	left: calc(50% - 20px);
+	top: -39px;
+	border: 20px solid transparent;
+	border-bottom: 20px solid #fff;
+}
+.close-box {
+	position: absolute;
+	right: -7px;
+	top: -9px;
+}
+.close-box .close {
+	background: red;
+	color: #fff;
+	display: block;
+	border: 1px solid #fff;
+	width: 10px;
+	text-align: center;
+	border-radius: 50%;
+	width: 20px;
+	line-height: 20px;
+}
+.drop-block p {
+	color: #ccc;
+}
+.contact-form input {
+	width: 400px;
+	padding: 10px;
+	display: block;
+	margin: 0 auto 10px;
+	border-radius: 4px;
+}
+.submit-btn {
+	display: block;
+	width: 200px;
+	text-align: center;
+	text-transform: uppercase;
+	color: #fff;
+	background: red;
+	border: none;
+	outline: none;
+	margin: 0 auto;
+	line-height: 38px;
+	border-radius: 4px;
+	border: 1px solid #ccc;
+}
+.subscribe-block {
+	background: #2a2931;
+	padding: 50px 0 140px;
+}
+.subscribe-block p {
+	text-align: center;
+}
+.social {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.social li {
+	width: 40px;
+	line-height: 40px;
+	color: #fff;
+	border: 1px solid #ccc;
+	text-align: center;
+	margin-right: 20px;
+	font-size: 20px;
+	border-radius: 4px;
+}
+.social li a {
+	display: block;
+}
+.subscribe-form input {
+	width: 700px;
+	margin: 0 auto;
+	background: grey;
+	display: block;
+	border: 1px solid #ccc;
+	outline: 0;
+	padding: 10px;
+}
+.subscribe-form .submit-btn {
+	background: #000;
+	border: #ccc;
+}
 footer {
 	position: relative;
-	background: #000;
+	background: grey;
 	width:100%;
     min-height:70px;
     margin-top:-70px;
@@ -121,16 +280,7 @@ footer {
 	display: flex;
     justify-content: space-between;
 }
-.social ul {
-	display: flex;
-	justify-content: space-around;
-    font-size: 20px;
-}
-address {
-	float: right;
-	text-transform: none;
-}
 .copyright {
-	float: left;
+	text-align: center;
 	font-size: 12px;
 }
