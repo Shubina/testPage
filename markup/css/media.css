@@ -4,6 +4,26 @@
         align-items: center;
     }
 }
+@media only screen and (max-width: 768px) { 
+	.presentation {
+		padding: 50px 0;
+	}
+	.analitics {
+		padding: 50px 7%;
+	}
+	.drop-block {
+		padding: 10px 3%;
+	}
+	.contact-form input {
+		width: 100%;
+	}
+	.subscribe-block {
+		padding: 50px 7% 90px;
+	}
+	.subscribe-form input {
+		width: 100%;
+	}
+}
 @media only screen and (max-width: 525px) {
     .presentation .holder .gallery-block {
         flex-direction: column;
